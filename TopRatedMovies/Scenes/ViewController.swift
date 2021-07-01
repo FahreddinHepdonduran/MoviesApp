@@ -14,15 +14,10 @@ final class ViewController: UIViewController {
   
   private var movies: Movies!
   private let movieImageAPI: String = "https://image.tmdb.org/t/p/original"
-  private let itemsPerRow: CGFloat = 3
-  private let sectionInsets = UIEdgeInsets(
-    top: 50.0,
-    left: 20.0,
-    bottom: 50.0,
-    right: 20.0)
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    collectionViewLayout()
     getMovies()
   }
 
@@ -63,6 +58,12 @@ private extension ViewController {
       }
       
     }
+  }
+  
+  func collectionViewLayout() {
+    let layout = UICollectionViewFlowLayout()
+    layout.itemSize = CGSize(width: 200, height: 300)
+    collectionView.collectionViewLayout = layout
   }
   
   func downloadWithUrlSession(at indexPath: IndexPath) {
