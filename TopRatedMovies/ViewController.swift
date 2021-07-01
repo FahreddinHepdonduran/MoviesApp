@@ -8,11 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
+  private var movies: Movies!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    NetworkManager.shared.getMovies { [weak self] (result) in
+      
+      switch result {
+      case .success(let movies):
+        self?.movies = movies
+      case .failure(let error):
+        print(error.localizedDescription)
+      }
+      
+    }
   }
 
 
