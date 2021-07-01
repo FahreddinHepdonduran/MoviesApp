@@ -38,7 +38,6 @@ extension ViewController: UICollectionViewDataSource {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoviesCollectionViewCell.description(),
                                                   for: indexPath) as! MoviesCollectionViewCell
     downloadWithUrlSession(at: indexPath)
-    cell.movieTitleLabel.text = movies.results[indexPath.row].title
     return cell
   }
 }
@@ -79,6 +78,8 @@ private extension ViewController {
         guard let cell = self.collectionView
           .cellForItem(at: indexPath) as? MoviesCollectionViewCell else {return}
         cell.moviePosterImage.image = image
+        cell.movieTitleLabel.text = self.movies.results[indexPath.row].title
+        cell.movieTitleLabel.isHidden = false
       }
     }
     .resume()
