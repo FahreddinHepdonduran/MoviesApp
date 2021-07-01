@@ -10,6 +10,7 @@ import UIKit
 
 final class ViewController: UIViewController {
 
+  @IBOutlet weak var collectionView: UICollectionView!
   private var movies: Movies!
   
   override func viewDidLoad() {
