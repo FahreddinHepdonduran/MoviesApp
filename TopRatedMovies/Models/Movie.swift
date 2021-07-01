@@ -11,7 +11,7 @@ import Foundation
 struct Movie: Codable {
   let id: Int
   let originalLanguage: String
-  let originalTitle: String
+  let originalTitle: String?
   let overview: String
   let popularity: Double
   let imagePath: String

@@ -9,5 +9,5 @@
 import Foundation
 
 struct Movies: Codable {
-  let movies: [Movie]
+  let results: [Movie]
 }
