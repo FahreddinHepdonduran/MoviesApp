@@ -23,7 +23,7 @@ final class ViewController: UIViewController {
 
 }
 
-extension ViewController: UICollectionViewDelegate { }
+extension ViewController: UICollectionViewDelegate {}
 
 extension ViewController: UICollectionViewDataSource {
   func numberOfSections(in collectionView: UICollectionView) -> Int {
