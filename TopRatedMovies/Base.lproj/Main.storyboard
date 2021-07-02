@@ -61,6 +61,7 @@
                                         <connections>
                                             <outlet property="moviePosterImage" destination="8aO-mV-rMT" id="pYp-5e-Mk7"/>
                                             <outlet property="movieTitleLabel" destination="AXU-tc-TwP" id="Hdd-qF-0f1"/>
+                                            <segue destination="EW6-pE-2GD" kind="show" identifier="ToMovieDetailsSegue" id="55d-QX-Y9m"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -87,6 +88,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="132.58928571428572"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="zQR-nq-lds">
+            <objects>
+                <viewController id="EW6-pE-2GD" customClass="MovieDetailsViewController" customModule="TopRatedMovies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L2Y-t5-Nvo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xNv-yR-gXj">
+                                <rect key="frame" x="20" y="101" width="374" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="A8c-z8-J4T">
+                                <rect key="frame" x="30" y="325" width="354" height="378"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="releasedate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbZ-7u-bLy">
+                                        <rect key="frame" x="0.0" y="0.0" width="89.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="originaltitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsN-Sz-kJE">
+                                        <rect key="frame" x="0.0" y="71.5" width="84.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="originallanguage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2Y-Dq-w2y">
+                                        <rect key="frame" x="0.0" y="143" width="126" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="population" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unt-JH-ema">
+                                        <rect key="frame" x="0.0" y="214.5" width="81" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="votecount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaC-DU-BSc">
+                                        <rect key="frame" x="0.0" y="286" width="77" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="voteaverage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7N5-a1-unE">
+                                        <rect key="frame" x="0.0" y="357.5" width="94" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BZ0-ey-6ah" firstAttribute="trailing" secondItem="xNv-yR-gXj" secondAttribute="trailing" constant="20" id="6vI-p5-jbN"/>
+                            <constraint firstItem="xNv-yR-gXj" firstAttribute="leading" secondItem="BZ0-ey-6ah" secondAttribute="leading" constant="20" id="IMS-N9-2HN"/>
+                            <constraint firstItem="BZ0-ey-6ah" firstAttribute="bottom" secondItem="A8c-z8-J4T" secondAttribute="bottom" constant="159" id="REj-bZ-hgi"/>
+                            <constraint firstItem="A8c-z8-J4T" firstAttribute="leading" secondItem="BZ0-ey-6ah" secondAttribute="leading" constant="30" id="W66-7F-oIp"/>
+                            <constraint firstItem="BZ0-ey-6ah" firstAttribute="trailing" secondItem="A8c-z8-J4T" secondAttribute="trailing" constant="30" id="fIe-VI-LgZ"/>
+                            <constraint firstItem="xNv-yR-gXj" firstAttribute="top" secondItem="BZ0-ey-6ah" secondAttribute="top" constant="13" id="h1D-g5-fZt"/>
+                            <constraint firstItem="A8c-z8-J4T" firstAttribute="top" secondItem="xNv-yR-gXj" secondAttribute="bottom" constant="96" id="mE7-Fb-BVx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BZ0-ey-6ah"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details" id="tr6-hM-Y2a"/>
+                    <connections>
+                        <outlet property="originalLanguageLabel" destination="T2Y-Dq-w2y" id="pG3-aC-g7v"/>
+                        <outlet property="originalTitleLabel" destination="AsN-Sz-kJE" id="Tho-jP-yMe"/>
+                        <outlet property="overviewTextView" destination="xNv-yR-gXj" id="Abx-O2-Xo4"/>
+                        <outlet property="populationLabel" destination="unt-JH-ema" id="p3y-3x-Zyx"/>
+                        <outlet property="releaseDateLabel" destination="fbZ-7u-bLy" id="qaN-pn-utI"/>
+                        <outlet property="voteAverageLabel" destination="7N5-a1-unE" id="U5J-4O-tdK"/>
+                        <outlet property="voteCountLabel" destination="ZaC-DU-BSc" id="aDf-AA-TZa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Vd-yf-yGa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1921.7391304347827" y="132.58928571428572"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CUL-oe-dob">

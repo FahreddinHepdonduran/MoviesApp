@@ -17,6 +17,7 @@
 		E57CCBDD268DB9B7000C8A6A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CCBDC268DB9B7000C8A6A /* Movie.swift */; };
 		E57CCBDF268DBFA2000C8A6A /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CCBDE268DBFA2000C8A6A /* Movies.swift */; };
 		E57CCBE4268DD194000C8A6A /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57CCBE3268DD194000C8A6A /* MoviesCollectionViewCell.swift */; };
+		E5CFBEC1268EF64800ADE782 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CFBEC0268EF64800ADE782 /* MovieDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E57CCBDC268DB9B7000C8A6A /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E57CCBDE268DBFA2000C8A6A /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		E57CCBE3268DD194000C8A6A /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
+		E5CFBEC0268EF64800ADE782 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				E57CCBC8268DB2FC000C8A6A /* ViewController.swift */,
+				E5CFBEC0268EF64800ADE782 /* MovieDetailsViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5CFBEC1268EF64800ADE782 /* MovieDetailsViewController.swift in Sources */,
 				E57CCBDA268DB4F9000C8A6A /* NetworkManager.swift in Sources */,
 				E57CCBC9268DB2FC000C8A6A /* ViewController.swift in Sources */,
 				E57CCBDF268DBFA2000C8A6A /* Movies.swift in Sources */,
