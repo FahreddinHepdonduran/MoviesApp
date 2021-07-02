@@ -14,6 +14,7 @@ final class ViewController: UIViewController {
   
   private var movies: Movies!
   private let movieImageAPI: String = "https://image.tmdb.org/t/p/original"
+  private var imageCache: [String : UIImage] = [:]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -50,7 +51,13 @@ extension ViewController: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoviesCollectionViewCell.description(),
                                                   for: indexPath) as! MoviesCollectionViewCell
-    downloadWithUrlSession(at: indexPath)
+    if let posterImage = imageCache[self.movieImageAPI + movies.results[indexPath.row].imagePath] {
+      cell.moviePosterImage.image = posterImage
+      cell.movieTitleLabel.text = movies.results[indexPath.row].title
+      cell.movieTitleLabel.isHidden = false
+    } else {
+      downloadWithUrlSession(at: indexPath)
+    }
     return cell
   }
 }
@@ -86,6 +93,8 @@ private extension ViewController {
       guard let self = self,
             let data = data,
             let image = UIImage(data: data) else {return}
+      
+      self.imageCache[urlString] = image
       
       DispatchQueue.main.async {
         guard let cell = self.collectionView
