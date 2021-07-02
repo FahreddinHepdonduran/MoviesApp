@@ -31,11 +31,11 @@ private extension MovieDetailsViewController {
     guard let movie = self.movie else { return }
     
     self.overviewTextView.text = movie.overview
-    self.releaseDateLabel.text = movie.releaseDate
-    self.originalTitleLabel.text = movie.originalTitle ?? ""
-    self.originalLanguageLabel.text = movie.originalLanguage
-    self.populationLabel.text = "\(movie.popularity)"
-    self.voteCountLabel.text = "\(movie.voteCount)"
-    self.voteAverageLabel.text = "\(movie.voteAverage)"
+    self.releaseDateLabel.text = "Date: " + movie.releaseDate
+    self.originalTitleLabel.text =  "Original Title: " + (movie.originalTitle ?? "-")
+    self.originalLanguageLabel.text = "Original Language: " + movie.originalLanguage
+    self.populationLabel.text = "Popularity: \(movie.popularity)"
+    self.voteCountLabel.text = "Vote Count: \(movie.voteCount)"
+    self.voteAverageLabel.text = "Vote Average: \(movie.voteAverage)"
   }
 }
