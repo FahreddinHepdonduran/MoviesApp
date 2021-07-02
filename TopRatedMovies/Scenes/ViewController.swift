@@ -20,10 +20,23 @@ final class ViewController: UIViewController {
     collectionViewLayout()
     getMovies()
   }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    guard segue.identifier == "ToMovieDetailsSegue",
+          let movie = sender as? Movie else {return}
+    
+    let destinationVC = segue.destination as! MovieDetailsViewController
+    destinationVC.movie = movie
+  }
 
 }
 
-extension ViewController: UICollectionViewDelegate {}
+extension ViewController: UICollectionViewDelegate {
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let movie = movies.results[indexPath.row]
+    performSegue(withIdentifier: "ToMovieDetailsSegue", sender: movie)
+  }
+}
 
 extension ViewController: UICollectionViewDataSource {
   func numberOfSections(in collectionView: UICollectionView) -> Int {

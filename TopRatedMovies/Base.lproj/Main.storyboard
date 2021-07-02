@@ -61,7 +61,6 @@
                                         <connections>
                                             <outlet property="moviePosterImage" destination="8aO-mV-rMT" id="pYp-5e-Mk7"/>
                                             <outlet property="movieTitleLabel" destination="AXU-tc-TwP" id="Hdd-qF-0f1"/>
-                                            <segue destination="EW6-pE-2GD" kind="show" identifier="ToMovieDetailsSegue" id="55d-QX-Y9m"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -83,6 +82,7 @@
                     <navigationItem key="navigationItem" title="Movies" id="4ca-oa-ES9"/>
                     <connections>
                         <outlet property="collectionView" destination="JhC-ha-fDD" id="Rfx-yM-8JC"/>
+                        <segue destination="EW6-pE-2GD" kind="show" identifier="ToMovieDetailsSegue" id="ucT-PX-LSF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
